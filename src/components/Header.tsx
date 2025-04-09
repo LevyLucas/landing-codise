@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <header className="h-[74px] bg-[#1C1C1C] sticky top-0 z-50">
+    <header className="h-[74px] sticky top-0 z-50 backdrop-blur bg-[rgba(28,28,28,0.9)]">
       <div className="max-w-7xl mx-auto px-4 h-full relative flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Image src="/codise-logo_logo.svg" alt="Logo Codise" width={192} height={28} />
