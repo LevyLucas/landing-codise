@@ -11,7 +11,7 @@ const Top = () => {
       </div>
 
       <a
-        href="https://wa.me/numero" //trocar pelo número do WhatsApp
+        href="https://wa.me/numero" //trocar pelo número do WhatsApp ou algum outro serviço de mensagem
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center px-20 py-3 rounded-lg font-medium bg-gradient-to-r from-[#8E42CF] to-[#FFB800] text-black hover:opacity-90 transition"
