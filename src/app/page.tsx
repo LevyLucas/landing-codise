@@ -4,6 +4,7 @@ import Projetos from '@/components/Projects';
 import Servicos from '@/components/Services';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ContactUs from '@/components/ContactUs/ContactUs';
 
 export default function Home() {
   return (
@@ -11,9 +12,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Sobre />
-        <Projetos />
         <Servicos />
+        <Projetos />
+        <Sobre />
+        <ContactUs />
       </main>
       <Footer />
     </>
