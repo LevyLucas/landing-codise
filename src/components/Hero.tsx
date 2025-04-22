@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-blue-600 to-purple-700 text-white min-h-[calc(100vh-74px)] flex items-center overflow-hidden">
+    <section id="inicio" className="relative bg-gradient-to-b from-blue-600 to-purple-700 text-white min-h-[calc(100vh-74px)] flex items-center overflow-hidden">
 
       <div
         className="absolute inset-0 z-0 opacity-[0.025]"
