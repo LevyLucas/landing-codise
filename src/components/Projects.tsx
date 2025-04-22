@@ -25,8 +25,8 @@ const Projects = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          slidesPerView={3}
-          spaceBetween={40}
+          slidesPerView={2}
+          spaceBetween={120}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -35,7 +35,6 @@ const Projects = () => {
             slideShadows: false,
           }}
           modules={[EffectCoverflow, Autoplay]}
-          className="!pb-10"
         >
           {[1, 2, 3, 4, 5, 6, 7].map((item) => (
             <SwiperSlide key={item}>
