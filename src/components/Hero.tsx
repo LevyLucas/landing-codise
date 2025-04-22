@@ -14,7 +14,16 @@ const Hero = () => {
 
   return (
     <section className="relative bg-gradient-to-b from-blue-600 to-purple-700 text-white min-h-[calc(100vh-74px)] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/codise-logo_simbol-light.png')] opacity-[0.025] bg-repeat bg-[length:250px_250px] z-0" />
+
+      <div
+        className="absolute inset-0 z-0 opacity-[0.025]"
+        style={{
+          backgroundImage: "url('/codise-logo_simbol-light.png')",
+          backgroundRepeat: 'repeat',
+          backgroundSize: '300px 300px',
+          backgroundPosition: 'center',
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 w-full flex flex-col lg:flex-row items-center justify-between gap-10">
         <div className="flex-1 flex flex-col gap-4">
