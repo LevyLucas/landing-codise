@@ -28,6 +28,7 @@ const Header = () => {
           <a href="#inicio" className="text-white hover:text-blue-500">Início</a>
           <a href="#sobre" className="text-white hover:text-blue-500">Sobre nós</a>
           <a href="#servicos" className="text-white hover:text-blue-500">Serviços</a>
+          <a href="#contato" className="text-white hover:text-blue-500">Contato</a>
         </nav>
 
         <div className="relative w-[80px]">
