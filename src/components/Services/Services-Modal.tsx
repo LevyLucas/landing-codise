@@ -35,8 +35,8 @@ const ServicesModal: React.FC<Props> = ({ onClose, title, description, image }) 
 
           <div className="w-full md:w-1/2 flex flex-col justify-between">
             <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-2xl font-bold mb-4 text-left">{title}</h2>
-              <p className="text-gray-300 whitespace-pre-line text-sm leading-relaxed text-left">
+              <h2 className="text-3xl font-bold mb-4 text-left">{title}</h2>
+              <p className="text-gray-300 whitespace-pre-line text-md leading-relaxed text-left">
                 {description}
               </p>
             </div>

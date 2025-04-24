@@ -9,7 +9,7 @@ const services = [
   {
     title: 'Sites Profissionais',
     image: '/professional-sites.png',
-    modalImage: '/professional-sites.png',
+    modalImage: '/modal-1.png',
     description: `Criamos sites rápidos, responsivos e bonitos — pensados para valorizar o seu negócio desde o primeiro clique.
 Nossa prioridade é entregar uma experiência leve, funcional e sob medida, seja para apresentar sua marca, captar clientes ou vender mais.`,
   },
