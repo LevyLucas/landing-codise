@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -17,9 +18,9 @@ const Header = () => {
   return (
     <header className="h-[74px] sticky top-0 z-50 backdrop-blur bg-[rgba(28,28,28,0.9)]">
       <div className="max-w-7xl mx-auto px-4 h-full relative flex items-center justify-between">
-        <a href="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image src="/codise-logo_logo.svg" alt="Logo Codise" width={192} height={28} />
-        </a>
+        </Link>
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10">
           <button onClick={() => scrollToId('inicio')} className="text-white hover:text-blue-500">{t.nav_home}</button>
