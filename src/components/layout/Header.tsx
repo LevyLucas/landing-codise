@@ -33,9 +33,8 @@ const Header = () => {
         <div className="relative w-[80px] hidden md:block">
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className={`bg-[#FFBB00] text-black w-full px-4 py-3 font-medium text-sm flex items-center justify-between ${
-              dropdownOpen ? 'rounded-t-lg' : 'rounded-lg'
-            }`}
+            className={`bg-[#FFBB00] text-black w-full px-4 py-3 font-medium text-sm flex items-center justify-between ${dropdownOpen ? 'rounded-t-lg' : 'rounded-lg'
+              }`}
           >
             {language}
             {dropdownOpen ? (
@@ -68,9 +67,8 @@ const Header = () => {
           >
             <FaBars
               size={24}
-              className={`text-black transform transition-transform duration-300 ${
-                mobileMenuOpen ? 'rotate-90' : 'rotate-0'
-              }`}
+              className={`text-black transform transition-transform duration-300 ${mobileMenuOpen ? 'rotate-90' : 'rotate-0'
+                }`}
             />
           </button>
         </div>
@@ -86,12 +84,35 @@ const Header = () => {
           <hr className="border-white/20 my-2 w-4/5 mx-auto" />
 
           <div className="flex justify-center">
-            <button
-              onClick={toggleLanguage}
-              className="bg-[#FFBB00] text-black py-2 px-4 rounded-lg font-semibold text-sm"
-            >
-              {language}
-            </button>
+            <div className="relative w-[80px]">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className={`bg-[#FFBB00] text-black w-full px-4 py-2 font-medium text-sm flex items-center justify-between ${dropdownOpen ? 'rounded-t-lg' : 'rounded-lg'
+                  }`}
+              >
+                {language}
+                {dropdownOpen ? (
+                  <BsFillCaretUpFill className="text-xl" />
+                ) : (
+                  <BsFillCaretDownFill className="text-xl" />
+                )}
+              </button>
+
+              {dropdownOpen && (
+                <div className="absolute left-0 top-full w-full rounded-b-lg bg-[#FFBB00] text-black text-sm font-medium overflow-hidden shadow-md z-50">
+                  <hr className="border-black/50 my-1 w-4/5 mx-auto" />
+                  <div
+                    className="px-3 py-2 cursor-pointer hover:opacity-80 text-center"
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      toggleLanguage();
+                    }}
+                  >
+                    {otherLanguage}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
