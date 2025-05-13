@@ -6,5 +6,56 @@
   "nav_services": "Services",
   "nav_contact": "Contact",
   "hero_title_start": "Enhance your business with a",
-  "hero_title_highlight": "professional website"
+  "hero_title_highlight": "professional website",
+  "services_title": "Services",
+  "services_description": "These are our main services, click the card to learn more!",
+  "modal_contact": "Get in touch!",
+  "services": [
+    {
+      "title": "Professional Websites",
+      "description": "We create fast, responsive, and beautiful websites — designed to highlight your business from the first click.\nOur priority is to deliver a light, functional, and tailored experience, whether to present your brand, attract clients, or increase sales."
+    },
+    {
+      "title": "Custom Web Applications",
+      "description": "Need more than a standard site? We build web systems designed specifically for your workflow.\nDashboards, internal tools, bookings, order control — whatever you need, we’ll code it."
+    },
+    {
+      "title": "Complete Visual Identity",
+      "description": "Your business needs a face, voice, and presence. We design logos, palettes, typography, and visuals that define your brand.\nFrom business cards to social posts, your identity will shine with style and consistency."
+    },
+    {
+      "title": "Digital Presence & Content Management",
+      "description": "Your client is online. Is your brand? We help you position yourself on social media with strategy, visual identity, and relevant content.\nWe offer ready-to-use kits for stories, posts, covers, and more — all tailored to your brand."
+    },
+    {
+      "title": "Custom SAAS Solutions",
+      "description": "Need an online platform to serve clients, manage services, or offer something innovative?\nWe build custom SAAS systems: accessible from anywhere, with login, admin panel, and exclusive features."
+    },
+    {
+      "title": "On-Demand Solutions",
+      "description": "Got a specific idea or unique challenge? We love thinking outside the box.\nWe build personalized projects that mix design and tech to create unique solutions — with your style."
+    }
+  ],
+  "projects_title": "Some of our projects",
+  "projects_description": "We develop various projects that fit your goals.",
+  "project_item": "Project",
+  "about_title": "About Codise",
+  "about_paragraph_1": "Codise was born in 2025 from friendship and the desire to create.",
+  "about_paragraph_2": "We are three friends passionate about technology, design, and digital solutions that truly work. We merge the best of visuals and code to transform ideas into unique experiences — with custom websites, apps, and visual identities.",
+  "about_paragraph_3": "We believe small businesses deserve an online presence as impactful as their potential.",
+  "about_mission_title": "Mission",
+  "about_mission_text": "Our mission is to help small and medium businesses stand out online with creative, fast, and tailor-made solutions — with no complications.",
+  "about_motto_title": "Motto",
+  "about_motto_text": "“We create what you imagine. And what you haven't even imagined yet.”",
+  "contact_title": "Shall we create your project together?",
+  "contact_subtitle": "Your quote with speed and convenience",
+  "contact_button": "Send a message",
+  "contact_alt_text": "Or contact us to receive more information. We’ll be available to present the best solution for your business.",
+  "contact_also_on": "We are also available on:",
+  "contact_form_name": "Full name",
+  "contact_form_email": "Email",
+  "contact_form_phone": "Phone number",
+  "contact_form_submit": "Contact us",
+  "footer_location": "São Paulo - Rio de Janeiro - Minas Gerais | Brazil",
+  "footer_rights": "All rights reserved - © Codise"
 }

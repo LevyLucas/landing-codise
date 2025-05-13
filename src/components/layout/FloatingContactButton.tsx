@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FloatingContactButton = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <a
@@ -16,7 +19,7 @@ const FloatingContactButton = () => {
           width={30}
           height={30}
         />
-        <span className="text-left mx-2">Entrar em contato!</span>
+        <span className="text-left mx-2">{t.modal_contact}</span>
       </a>
     </div>
   );

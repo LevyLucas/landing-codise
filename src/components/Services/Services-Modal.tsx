@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { IoClose } from 'react-icons/io5';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface Props {
   onClose: () => void;
@@ -12,6 +13,8 @@ interface Props {
 }
 
 const ServicesModal: React.FC<Props> = ({ onClose, title, description, image }) => {
+  const { t } = useLanguage();
+
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-6">
       <div className="bg-[#1A1A1A] text-white max-w-5xl w-full rounded-2xl overflow-hidden p-8 relative border border-white/10">
@@ -52,7 +55,7 @@ const ServicesModal: React.FC<Props> = ({ onClose, title, description, image }) 
                   width={30}
                   height={30}
                 />
-                <span className="text-left mx-2">Entrar em contato!</span>
+                <span className="text-left mx-2">{t.modal_contact}</span>
               </a>
             </div>
           </div>

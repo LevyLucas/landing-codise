@@ -2,25 +2,22 @@
 
 import React, { useState } from 'react';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
   const [showMission, setShowMission] = useState(false);
   const [showMotto, setShowMotto] = useState(false);
 
+  const { t } = useLanguage();
+
   return (
     <section id="sobre" className="py-20 bg-[#121212] text-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-left max-w-3xl mb-12">
-          <h2 className="text-4xl font-bold mb-4">Sobre a Codise</h2>
-          <p className="text-lg text-gray-200 mb-4">
-            A Codise nasceu em 2025 da amizade e da vontade de criar.
-          </p>
-          <p className="text-lg text-gray-200 mb-4">
-            Somos três amigos apaixonados por tecnologia, design e soluções digitais que funcionam de verdade. Unimos o melhor do visual e do código para transformar ideias em experiências únicas — com sites, apps e identidades visuais sob medida.
-          </p>
-          <p className="text-lg text-gray-200">
-            Acreditamos que pequenas empresas merecem uma presença online tão impactante quanto seu potencial.
-          </p>
+          <h2 className="text-4xl font-bold mb-4">{t.about_title}</h2>
+          <p className="text-lg text-gray-200 mb-4">{t.about_paragraph_1}</p>
+          <p className="text-lg text-gray-200 mb-4">{t.about_paragraph_2}</p>
+          <p className="text-lg text-gray-200">{t.about_paragraph_3}</p>
         </div>
 
         <div className="min-h-[160px]">
@@ -29,12 +26,14 @@ const About = () => {
               className="flex items-center gap-2 text-xl font-semibold mb-2"
               onClick={() => setShowMission(!showMission)}
             >
-              {showMission ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />} Missão
+              {showMission ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />} {t.about_mission_title}
             </button>
-            <div className={`pl-6 transition-opacity duration-300 ${showMission ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
-              <p className="text-gray-300">
-                Nossa missão é ajudar pequenas e médias empresas a se destacarem no digital com soluções criativas, rápidas e feitas sob medida — sem complicação.
-              </p>
+            <div
+              className={`pl-6 transition-opacity duration-300 ${
+                showMission ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
+              }`}
+            >
+              <p className="text-gray-300">{t.about_mission_text}</p>
             </div>
           </div>
 
@@ -43,12 +42,14 @@ const About = () => {
               className="flex items-center gap-2 text-xl font-semibold mb-2"
               onClick={() => setShowMotto(!showMotto)}
             >
-              {showMotto ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />} Lema
+              {showMotto ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />} {t.about_motto_title}
             </button>
-            <div className={`pl-6 transition-opacity duration-300 ${showMotto ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
-              <p className="text-gray-300">
-                “Criamos o que você imagina. E o que você ainda nem imaginou.”
-              </p>
+            <div
+              className={`pl-6 transition-opacity duration-300 ${
+                showMotto ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
+              }`}
+            >
+              <p className="text-gray-300">{t.about_motto_text}</p>
             </div>
           </div>
         </div>
