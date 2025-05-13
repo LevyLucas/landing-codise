@@ -3,16 +3,16 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
+import { HiMenuAlt3 } from 'react-icons/hi';
+import { IoClose } from 'react-icons/io5';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState<'PT' | 'EN'>('PT');
 
-  const toggleDropdown = () => setIsOpen((prev) => !prev);
-
-  const selectLanguage = (lang: 'PT' | 'EN') => {
-    setLanguage(lang);
-    setIsOpen(false);
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === 'PT' ? 'EN' : 'PT'));
   };
 
   const otherLanguage = language === 'PT' ? 'EN' : 'PT';
@@ -20,9 +20,9 @@ const Header = () => {
   return (
     <header className="h-[74px] sticky top-0 z-50 backdrop-blur bg-[rgba(28,28,28,0.9)]">
       <div className="max-w-7xl mx-auto px-4 h-full relative flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <a href="/" className="flex items-center">
           <Image src="/codise-logo_logo.svg" alt="Logo Codise" width={192} height={28} />
-        </div>
+        </a>
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10">
           <a href="#inicio" className="text-white hover:text-blue-500">Início</a>
@@ -31,34 +31,70 @@ const Header = () => {
           <a href="#contato" className="text-white hover:text-blue-500">Contato</a>
         </nav>
 
-        <div className="relative w-[80px]">
+        <div className="relative w-[80px] hidden md:block">
           <button
-            onClick={toggleDropdown}
+            onClick={() => setDropdownOpen(!dropdownOpen)}
             className={`bg-[#FFBB00] text-black w-full px-4 py-3 font-medium text-sm flex items-center justify-between ${
-              isOpen ? 'rounded-t-lg' : 'rounded-lg'
+              dropdownOpen ? 'rounded-t-lg' : 'rounded-lg'
             }`}
           >
             {language}
-            {isOpen ? (
+            {dropdownOpen ? (
               <BsFillCaretUpFill className="text-xl" />
             ) : (
               <BsFillCaretDownFill className="text-xl" />
             )}
           </button>
 
-          {isOpen && (
-            <div className="absolute left-0 top-full w-full rounded-b-lg bg-[#FFBB00] text-black text-sm font-medium overflow-hidden shadow-md">
+          {dropdownOpen && (
+            <div className="absolute left-0 top-full w-full rounded-b-lg bg-[#FFBB00] text-black text-sm font-medium overflow-hidden shadow-md z-50">
               <hr className="border-black/50 my-1 w-4/5 mx-auto" />
               <div
                 className="px-3 py-2 cursor-pointer hover:opacity-80 text-center"
-                onClick={() => selectLanguage(otherLanguage)}
+                onClick={() => {
+                  setDropdownOpen(false);
+                  toggleLanguage();
+                }}
               >
                 {otherLanguage}
               </div>
             </div>
           )}
         </div>
+
+        <div className="md:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="bg-[#FFBB00] p-2 rounded-lg"
+          >
+            {mobileMenuOpen ? (
+              <IoClose size={24} className="text-black" />
+            ) : (
+              <HiMenuAlt3 size={24} className="text-black" />
+            )}
+          </button>
+        </div>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-[#1C1C1C] text-white px-6 py-6 space-y-4 border-t border-white/10">
+          <a href="#inicio" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Início</a>
+          <a href="#sobre" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Sobre nós</a>
+          <a href="#servicos" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Serviços</a>
+          <a href="#contato" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Contato</a>
+
+          <hr className="border-white/20 my-2 w-4/5 mx-auto" />
+
+          <div className="flex justify-center">
+            <button
+              onClick={toggleLanguage}
+              className="bg-[#FFBB00] text-black py-2 px-4 rounded-lg font-semibold text-sm"
+            >
+              {language}
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
