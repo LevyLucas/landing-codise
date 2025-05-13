@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Agência Codise
 
-## Getting Started
+Website institucional desenvolvido para a **Agência Codise** — uma equipe criativa que transforma ideias em soluções digitais sob medida.
 
-First, run the development server:
+![Codise Banner](public/codise-banner.png)
+
+## ✨ Tecnologias Utilizadas
+
+- [Next.js 14](https://nextjs.org) — Estrutura moderna para aplicações React
+- [TypeScript](https://www.typescriptlang.org) — Tipagem estática para maior segurança e produtividade
+- [Tailwind CSS](https://tailwindcss.com) — Utilitários para criação de interfaces modernas e responsivas
+- [Geist Font](https://vercel.com/font) — Tipografia leve e otimizada
+- [React Icons](https://react-icons.github.io/react-icons/) — Ícones vetoriais de alta qualidade
+- [SwiperJS](https://swiperjs.com/react) — Carrossel interativo de projetos
+- 🌍 Suporte a múltiplos idiomas (PT/EN)
+
+---
+
+## 🚀 Começando
+
+Clone o repositório e instale as dependências:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/LevyLucas/landing-codise
+cd landing-codise
+
+npm install
+# ou
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Internacionalização
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+/locales/pt.json
+/locales/en.json
+```
 
-## Learn More
+## 📱 Responsivo e Acessível
 
-To learn more about Next.js, take a look at the following resources:
+- ✅ Menu mobile com animação de rotação
+- ✅ Scroll suave com compensação da header fixa
+- ✅ Textos com contraste acessível
+- ✅ Componentes otimizados para performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deploy
+Hospedado com Vercel, com suporte total a SSR e otimizações nativas para Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧑‍💻 Desenvolvido por
+- Agência Codise
+- São Paulo • Rio de Janeiro • Minas Gerais | Brasil
+- 📩 agencia.codise@gmail.com
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> “Criamos o que você imagina. E o que você ainda nem imaginou.”
