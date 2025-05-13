@@ -25,13 +25,13 @@ const Projects = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          slidesPerView={2}
+          slidesPerView={2.9}
           spaceBetween={120}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 120,
-            modifier: 2,
+            depth: 100,
+            modifier: 1,
             slideShadows: false,
           }}
           modules={[EffectCoverflow, Autoplay]}
