@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <section id="sobre" className="py-20 bg-[#121212] text-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-left max-w-3xl mb-12">
           <h2 className="text-4xl font-bold mb-4">Sobre a Codise</h2>
           <p className="text-lg text-gray-200 mb-4">

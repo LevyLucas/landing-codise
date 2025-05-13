@@ -10,7 +10,7 @@ import 'swiper/css/autoplay';
 const Projects = () => {
   return (
     <section id="projetos" className="py-20 bg-gradient-to-t from-blue-600 to-purple-700 text-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">Alguns dos nossos projetos</h2>
         <p className="text-lg mb-10">
           Desenvolvemos diferentes projetos que encaixam no seu objetivo.
