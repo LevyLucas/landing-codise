@@ -23,15 +23,14 @@ const About = () => {
         <div className="min-h-[160px]">
           <div className="mb-6">
             <button
-              className="flex items-center gap-2 text-xl font-semibold mb-2"
+              className="flex items-center gap-2 text-xl font-semibold mb-2 min-w-[160px] whitespace-nowrap"
               onClick={() => setShowMission(!showMission)}
             >
               {showMission ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />} {t.about_mission_title}
             </button>
             <div
-              className={`pl-6 transition-opacity duration-300 ${
-                showMission ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
-              }`}
+              className={`pl-6 transition-opacity duration-300 ${showMission ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
+                }`}
             >
               <p className="text-gray-300">{t.about_mission_text}</p>
             </div>
@@ -39,15 +38,14 @@ const About = () => {
 
           <div>
             <button
-              className="flex items-center gap-2 text-xl font-semibold mb-2"
+              className="flex items-center gap-2 text-xl font-semibold mb-2 min-w-[160px] whitespace-nowrap"
               onClick={() => setShowMotto(!showMotto)}
             >
               {showMotto ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />} {t.about_motto_title}
             </button>
             <div
-              className={`pl-6 transition-opacity duration-300 ${
-                showMotto ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
-              }`}
+              className={`pl-6 transition-opacity duration-300 ${showMotto ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
+                }`}
             >
               <p className="text-gray-300">{t.about_motto_text}</p>
             </div>

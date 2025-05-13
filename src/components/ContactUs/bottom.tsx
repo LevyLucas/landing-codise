@@ -39,7 +39,7 @@ const Bottom = () => {
         />
         <button
           type="submit"
-          className="w-40 py-3 rounded-md bg-[#FFB800] text-black font-semibold hover:brightness-110 transition self-center md:self-start text-xs"
+          className="w-[160px] py-3 rounded-md bg-[#FFB800] text-black font-semibold hover:brightness-110 transition self-center md:self-start text-xs whitespace-nowrap"
         >
           {t.contact_form_submit}
         </button>

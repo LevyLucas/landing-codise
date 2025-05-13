@@ -19,7 +19,9 @@ const FloatingContactButton = () => {
           width={30}
           height={30}
         />
-        <span className="text-left mx-2">{t.modal_contact}</span>
+        <span className="mx-2 w-[140px] text-sm whitespace-nowrap overflow-hidden text-ellipsis text-center">
+          {t.modal_contact}
+        </span>
       </a>
     </div>
   );

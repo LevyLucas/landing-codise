@@ -22,7 +22,9 @@ const Top = () => {
         className="inline-flex items-center px-20 py-3 rounded-lg font-medium bg-gradient-to-r from-[#8E42CF] to-[#FFB800] text-black hover:opacity-90 transition"
       >
         <FaWhatsapp className="text-5xl mr-2" />
-        <p className="text-md font-bold">{t.contact_button}</p>
+        <p className="text-md font-bold whitespace-nowrap overflow-hidden text-ellipsis w-[160px] text-center">
+          {t.contact_button}
+        </p>
       </a>
     </div>
   );
