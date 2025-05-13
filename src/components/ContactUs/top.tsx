@@ -19,10 +19,10 @@ const Top = () => {
         href="https://wa.me/numero" //trocar pelo número do WhatsApp ou algum outro serviço de mensagem
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center px-20 py-3 rounded-lg font-medium bg-gradient-to-r from-[#8E42CF] to-[#FFB800] text-black hover:opacity-90 transition"
+        className="inline-flex items-center justify-center gap-2 w-[350px] py-3 rounded-lg font-medium bg-gradient-to-r from-[#8E42CF] to-[#FFB800] text-black hover:opacity-90 transition"
       >
-        <FaWhatsapp className="text-5xl mr-2" />
-        <p className="text-md font-bold whitespace-nowrap overflow-hidden text-ellipsis w-[160px] text-center">
+        <FaWhatsapp className="text-5xl" />
+        <p className="text-md font-bold whitespace-nowrap text-center">
           {t.contact_button}
         </p>
       </a>

@@ -21,7 +21,7 @@ const Header = () => {
         </a>
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10">
-          <a href="#inicio" className="text-white hover:text-blue-500">{t.nav_home}</a>
+          <a href="/" className="text-white hover:text-blue-500">{t.nav_home}</a>
           <a href="#sobre" className="text-white hover:text-blue-500">{t.nav_about}</a>
           <a href="#servicos" className="text-white hover:text-blue-500">{t.nav_services}</a>
           <a href="#contato" className="text-white hover:text-blue-500">{t.nav_contact}</a>
@@ -73,7 +73,7 @@ const Header = () => {
 
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#1C1C1C] text-white px-6 py-6 space-y-6 border-t border-white/10">
-          <a href="#inicio" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_home}</a>
+          <a href="/" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_home}</a>
           <a href="#sobre" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_about}</a>
           <a href="#servicos" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_services}</a>
           <a href="#contato" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_contact}</a>
