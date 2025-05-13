@@ -3,8 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
-import { HiMenuAlt3 } from 'react-icons/hi';
-import { IoClose } from 'react-icons/io5';
+import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -65,23 +64,24 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="bg-[#FFBB00] p-2 rounded-lg"
+            className="bg-[#FFBB00] p-2 rounded-lg transition-transform"
           >
-            {mobileMenuOpen ? (
-              <IoClose size={24} className="text-black" />
-            ) : (
-              <HiMenuAlt3 size={24} className="text-black" />
-            )}
+            <FaBars
+              size={24}
+              className={`text-black transform transition-transform duration-300 ${
+                mobileMenuOpen ? 'rotate-90' : 'rotate-0'
+              }`}
+            />
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#1C1C1C] text-white px-6 py-6 space-y-4 border-t border-white/10">
-          <a href="#inicio" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Início</a>
-          <a href="#sobre" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Sobre nós</a>
-          <a href="#servicos" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Serviços</a>
-          <a href="#contato" className="block text-center hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>Contato</a>
+        <div className="md:hidden bg-[#1C1C1C] text-white px-6 py-6 space-y-6 border-t border-white/10">
+          <a href="#inicio" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>Início</a>
+          <a href="#sobre" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>Sobre nós</a>
+          <a href="#servicos" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>Serviços</a>
+          <a href="#contato" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>Contato</a>
 
           <hr className="border-white/20 my-2 w-4/5 mx-auto" />
 
