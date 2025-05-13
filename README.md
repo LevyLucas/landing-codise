@@ -21,8 +21,8 @@ Website institucional desenvolvido para a **Agência Codise** — uma equipe cri
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/seu-usuario/codise-site.git
-cd codise-site
+git clone https://github.com/LevyLucas/landing-codise
+cd landing-codise
 
 npm install
 # ou
@@ -45,17 +45,17 @@ yarn dev
 
 ## 📱 Responsivo e Acessível
 
-> ✅ Menu mobile com animação de rotação
-> ✅ Scroll suave com compensação da header fixa
-> ✅ Textos com contraste acessível
-> ✅ Componentes otimizados para performance
+- ✅ Menu mobile com animação de rotação
+- ✅ Scroll suave com compensação da header fixa
+- ✅ Textos com contraste acessível
+- ✅ Componentes otimizados para performance
 
 ## 📦 Deploy
 Hospedado com Vercel, com suporte total a SSR e otimizações nativas para Next.js.
 
 ## 🧑‍💻 Desenvolvido por
-Agência Codise
-São Paulo • Rio de Janeiro • Minas Gerais | Brasil
-📩 agencia.codise@gmail.com
+- Agência Codise
+- São Paulo • Rio de Janeiro • Minas Gerais | Brasil
+- 📩 agencia.codise@gmail.com
 
 > “Criamos o que você imagina. E o que você ainda nem imaginou.”
