@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { scrollToId } from '@/utils/scrollToId';
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,10 +22,10 @@ const Header = () => {
         </a>
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10">
-          <a href="/" className="text-white hover:text-blue-500">{t.nav_home}</a>
-          <a href="#servicos" className="text-white hover:text-blue-500">{t.nav_services}</a>
-          <a href="#sobre" className="text-white hover:text-blue-500">{t.nav_about}</a>
-          <a href="#contato" className="text-white hover:text-blue-500">{t.nav_contact}</a>
+          <button onClick={() => scrollToId('inicio')} className="text-white hover:text-blue-500">{t.nav_home}</button>
+          <button onClick={() => scrollToId('servicos')} className="text-white hover:text-blue-500">{t.nav_services}</button>
+          <button onClick={() => scrollToId('sobre')} className="text-white hover:text-blue-500">{t.nav_about}</button>
+          <button onClick={() => scrollToId('contato')} className="text-white hover:text-blue-500">{t.nav_contact}</button>
         </nav>
 
         <div className="relative w-[80px] hidden md:block">
@@ -73,10 +74,42 @@ const Header = () => {
 
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#1C1C1C] text-white px-6 py-6 space-y-6 border-t border-white/10">
-          <a href="/" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_home}</a>
-          <a href="#servicos" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_services}</a>
-          <a href="#sobre" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_about}</a>
-          <a href="#contato" className="block text-center hover:text-blue-500 text-base" onClick={() => setMobileMenuOpen(false)}>{t.nav_contact}</a>
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              scrollToId('inicio');
+            }}
+            className="block text-center hover:text-blue-500 text-base w-full"
+          >
+            {t.nav_home}
+          </button>
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              scrollToId('servicos');
+            }}
+            className="block text-center hover:text-blue-500 text-base w-full"
+          >
+            {t.nav_services}
+          </button>
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              scrollToId('sobre');
+            }}
+            className="block text-center hover:text-blue-500 text-base w-full"
+          >
+            {t.nav_about}
+          </button>
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              scrollToId('contato');
+            }}
+            className="block text-center hover:text-blue-500 text-base w-full"
+          >
+            {t.nav_contact}
+          </button>
 
           <hr className="border-white/20 my-2 w-4/5 mx-auto" />
 
