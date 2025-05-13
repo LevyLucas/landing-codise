@@ -25,8 +25,15 @@ const Projects = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          slidesPerView={2.9}
           spaceBetween={120}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2.9,
+            },
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
