@@ -44,8 +44,8 @@ const Hero = () => {
             <Image
               src="/codise-cta-illustration.png"
               alt="Ilustração Codise"
-              width={420}
-              height={420}
+              width={1024}
+              height={1024}
               className="w-auto h-auto max-w-[420px] mx-auto lg:ml-12"
               priority
             />

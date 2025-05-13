@@ -9,8 +9,8 @@ const Footer = () => {
           <Image
             src="/codise-logo_logo-light.png"
             alt="Codise Logo"
-            width={140}
-            height={40}
+            width={1024}
+            height={512}
             className="w-auto h-40"
           />
         </div>
